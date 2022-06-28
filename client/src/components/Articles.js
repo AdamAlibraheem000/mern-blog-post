@@ -9,7 +9,7 @@ function Articles({posts}) {
        <img src={spinner} alt="loading"/>
        ) : (
     posts.map((article, key) => (
-        <div className='container'>
+        <div className='container' key={key}>
         <h2>{article.title}</h2>
         <p>{article.article}</p>
         <p>
