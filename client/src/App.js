@@ -6,6 +6,7 @@ import Navbar from './components/layouts/Navbar';
 import Footer from './components/layouts/Footer';
 import Articles from './components/Articles';
 import AddArticle from './components/AddArticle';
+import Article from './components/Article';
 import {Routes, Route} from 'react-router-dom';
 import axios from 'axios';
 
@@ -25,6 +26,7 @@ function App() {
      <Navbar/>
      <Routes>
       <Route path='/' element={ <Articles posts={posts}/>}/>
+      <Route path='/article/:id' element={ <Article posts={posts}/>}/>
       <Route path='/add-article' element={ <AddArticle/> }/>
      </Routes>
      <Footer/>
